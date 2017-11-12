@@ -4,16 +4,16 @@
             
             <div class="formDiv">
                 <form >
-                    <select id="filter">
-                        <option value="">Select...</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                    <select name="filter">
+                        <option value="">Filter by...</option>
+                        <option value="Name">Title</option>
+                        <option value="Genre">Genre</option>
+                        <option value="Director">Director</option>
                     </select>
                     
                     <input type="radio" name="order" value="ascending">Asc
                     <input type="radio" name="order" value="descending">Desc
-                    <input type="submit" name="submit" value="Search">
+                    <input type="submit" value="Search" name="submit">
                 </form>
                 
                 <form action="cart.php">
@@ -27,8 +27,16 @@
                     
                     $conn = getDatabaseConnection();
                     
-                    $sql = "SELECT * FROM movies";
+                    $sql = "SELECT * FROM movies WHERE 1";
                     
+                    if(isset($_GET['submit'])){
+                        if(!empty($_GET['filter']))
+                        {
+                            $sql .= " ORDER BY " . $_GET['filter'];
+                        }
+                    }
+                    
+                    //echo $sql;
                     $stmt = $conn->prepare($sql);
                     $stmt->execute();
                     $record = $stmt->fetchAll(PDO::FETCH_ASSOC);
