@@ -70,15 +70,15 @@
                         echo "<td><button class='accordion'>". $record["Name"] ."</button>";
                         echo "<div class='panel'>";
                         
-                        echo "<p>Summary:</p>";
-                        echo "<p>A summary column needs to be added in all of the</p>";
-                        echo "<p>tables for the product and needs to be called in the commented</p>";
-                        echo "<p>code below. Once done, uncomment code and delete this</p>";
-                        echo "<p>block of paragraph.</p>";
+                        // echo "<p>Summary:</p>";
+                        // echo "<p>A summary column needs to be added in all of the</p>";
+                        // echo "<p>tables for the product and needs to be called in the commented</p>";
+                        // echo "<p>code below. Once done, uncomment code and delete this</p>";
+                        // echo "<p>block of paragraph.</p>";
                         
-                        // echo "<p>";
-                        // echo $record["Name of Column"];
-                        // echo "</p>";
+                        echo "<p>";
+                        echo $record["Summary"];
+                        echo "</p>";
                         
                         echo "</div>";
                         echo "</td>";
