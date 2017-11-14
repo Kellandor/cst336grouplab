@@ -2,12 +2,12 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
-    <body>
+    <body class="main">
         <div class="container">
-            
+            <h1>Not Blockbuster</h1>
             <div class="formDiv">
                 <form >
-                    <select name="filter">
+                    <select id="dropdown" name="filter">
                         <option value="">Filter by...</option>
                         <option value="Name">Title</option>
                         <option value="Genre">Genre</option>
