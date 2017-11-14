@@ -3,8 +3,8 @@
         <div class="container">
             
             <div class="formDiv">
-                <form action="index.php">
-                    <input type="submit" value="Back to Shopping">
+                <form action="home.php">
+                    <input type="submit" value="Back to home">
                 </form>
             </div>
             
